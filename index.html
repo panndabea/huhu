@@ -54,12 +54,29 @@
       display: flex;
       justify-content: space-around;
       margin: 2rem 0;
+      flex-wrap: wrap; /* Damit es bei kleineren Screens umbricht */
+    }
+
+    /* Mini-Collage für "Bier & Bauarbeiter" */
+    .beer-construction {
+      display: flex;
+      flex-direction: row;
+      width: 40%;
+      justify-content: space-between;
+    }
+    .beer-construction img {
+      width: 48%;
+      border: 2px solid #ccc;
+      border-radius: 4px;
     }
 
     .images-section img {
-      width: 40%;
       border: 2px solid #ccc;
       border-radius: 4px;
+    }
+
+    .heimkino {
+      width: 40%;
     }
 
     .footer {
@@ -139,13 +156,24 @@
   </div>
 
   <div class="images-section">
-    <!-- Platzhalter-Bilder mit passendem Text -->
+    <!-- "Bier & Bauarbeiter" als Mini-Collage -->
+    <div class="beer-construction">
+      <!-- Bier -->
+      <img 
+        src="https://images.unsplash.com/photo-1552299106-fe93f6b78f55?ixlib=rb-4.0&auto=format&fit=crop&w=480&q=80" 
+        alt="Bier"
+      >
+      <!-- Bauarbeiter -->
+      <img 
+        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f8?ixlib=rb-4.0&auto=format&fit=crop&w=480&q=80" 
+        alt="Bauarbeiter"
+      >
+    </div>
+
+    <!-- Heimkino -->
     <img 
-      src="https://via.placeholder.com/300?text=Bier+%26+Bauarbeiter" 
-      alt="Bier & Bauarbeiter"
-    >
-    <img 
-      src="https://via.placeholder.com/300?text=Heimkino" 
+      class="heimkino"
+      src="https://images.unsplash.com/photo-1586079362478-48e55fec2f64?ixlib=rb-4.0&auto=format&fit=crop&w=480&q=80"
       alt="Heimkino"
     >
   </div>
