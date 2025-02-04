@@ -27,6 +27,13 @@
       margin-bottom: 2rem;
     }
 
+    /* Größere Schrift für die drei "Amt"-Emojis */
+    .amt-emojis {
+      font-size: 2.5rem; /* Anpassen nach Wunsch */
+      margin: 0;
+      line-height: 1.2;
+    }
+
     .title {
       font-size: 1.8rem;
       margin: 0.5rem 0 0;
@@ -50,43 +57,6 @@
       margin: 0.5rem 0;
     }
 
-    /* Bildbereich mit flex */
-    .images-section {
-      display: flex;
-      justify-content: space-around;
-      margin: 2rem 0;
-      flex-wrap: wrap; /* Falls der Platz zu klein ist, werden Zeilen gebrochen */
-    }
-
-    /* Zwei Emojis nebeneinander für "Bier & Bauarbeiter" */
-    .beer-construction {
-      display: flex;
-      flex-direction: row;
-      width: 40%;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-    .beer-construction img {
-      width: 48%;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-    }
-
-    /* Einzelnes Emoji für "Heimkino" */
-    .heimkino {
-      width: 40%;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 2px solid #ccc;
-      padding-top: 1rem;
-    }
-
     .official-seal {
       position: absolute;
       right: 20px;
@@ -96,6 +66,45 @@
       transform: rotate(-15deg);
       font-weight: bold;
       color: #900;
+    }
+
+    /* Bereich für Emojis und ihre Überschriften */
+    .images-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start; /* Emojis oben ausgerichtet */
+      margin: 2rem 0;
+      flex-wrap: wrap; /* Falls der Platz zu klein ist, werden Zeilen gebrochen */
+    }
+
+    /* Gemeinsamer Block für Emoji und Titel */
+    .icon-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem;
+    }
+
+    /* Hier kann man die Emoji-Größe anpassen */
+    .emoji {
+      font-size: 2rem; /* Emojis vergrößern oder verkleinern */
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Kursiver, etwas kleinerer Text direkt darunter */
+    .emoji-title {
+      font-style: italic;
+      font-size: 1.0rem;
+      margin: 0;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 2px solid #ccc;
+      padding-top: 1rem;
     }
 
     .btn-print {
@@ -126,13 +135,8 @@
   <div class="official-seal">Amtlich</div>
 
   <div class="header">
-    <!-- Amtliches "Logo" (Emoji 🏛 als base64-kodiertes SVG) -->
-    <img 
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKIkzwvdGV4dD48L3N2Zz4="
-      alt="Amtliches Logo" 
-      width="80" 
-      height="80"
-    >
+    <!-- Drei größere Emojis fürs "Amt" -->
+    <h1 class="amt-emojis">🥇🦉🥇</h1>
     <h1 class="title">Behördlicher Gutschein</h1>
     <p class="sub-title">Gemäß Erlass BGB V § 4711</p>
   </div>
@@ -157,24 +161,17 @@
   </div>
 
   <div class="images-section">
-    <!-- Bier & Bauarbeiter als Mini-Collage -->
-    <div class="beer-construction">
-      <img 
-        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKEnPC90ZXh0Pjwvc3ZnPg=="
-        alt="Bier"
-      >
-      <img 
-        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKcvTwvdGV4dD48L3N2Zz4="
-        alt="Bauarbeiter"
-      >
+    <!-- Gemeinsamer Spass -->
+    <div class="icon-block">
+      <div class="emoji">🍻🚧🏗️👷‍♂️👷🏽‍♂️</div>
+      <div class="emoji-title">gemeinsamer Spass</div>
     </div>
 
-    <!-- Heimkino (Emoji 🎬) -->
-    <img 
-      class="heimkino"
-      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKAnsM8L3RleHQ+PC9zdmc+"
-      alt="Heimkino"
-    >
+    <!-- Heimkino -->
+    <div class="icon-block">
+      <div class="emoji">🍿📽🫕🇨🇭</div>
+      <div class="emoji-title">Heimkino</div>
+    </div>
   </div>
 
   <div class="footer">
