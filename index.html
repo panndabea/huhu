@@ -50,19 +50,21 @@
       margin: 0.5rem 0;
     }
 
+    /* Bildbereich mit flex */
     .images-section {
       display: flex;
       justify-content: space-around;
       margin: 2rem 0;
-      flex-wrap: wrap; /* Damit es bei kleineren Screens umbricht */
+      flex-wrap: wrap; /* Falls der Platz zu klein ist, werden Zeilen gebrochen */
     }
 
-    /* Mini-Collage für "Bier & Bauarbeiter" */
+    /* Zwei Emojis nebeneinander für "Bier & Bauarbeiter" */
     .beer-construction {
       display: flex;
       flex-direction: row;
       width: 40%;
       justify-content: space-between;
+      margin-bottom: 1rem;
     }
     .beer-construction img {
       width: 48%;
@@ -70,13 +72,11 @@
       border-radius: 4px;
     }
 
-    .images-section img {
-      border: 2px solid #ccc;
-      border-radius: 4px;
-    }
-
+    /* Einzelnes Emoji für "Heimkino" */
     .heimkino {
       width: 40%;
+      border: 2px solid #ccc;
+      border-radius: 4px;
     }
 
     .footer {
@@ -122,15 +122,16 @@
 <body>
 
 <div class="container">
+  <!-- halbtransparenter "Stempel" -->
   <div class="official-seal">Amtlich</div>
 
   <div class="header">
-    <!-- "Amtliches" Logo als Base64-kodiertes SVG -->
+    <!-- Amtliches "Logo" (Emoji 🏛 als base64-kodiertes SVG) -->
     <img 
-      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI4MCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgYWxpZ25tZW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIj5BTVQ8L3RleHQ+PC9zdmc+" 
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKIkzwvdGV4dD48L3N2Zz4="
       alt="Amtliches Logo" 
-      width="100" 
-      height="100"
+      width="80" 
+      height="80"
     >
     <h1 class="title">Behördlicher Gutschein</h1>
     <p class="sub-title">Gemäß Erlass BGB V § 4711</p>
@@ -150,30 +151,28 @@
     </p>
     <p>
       Bitte beachten Sie, dass bei Inanspruchnahme dieses Gutscheins 
-      sämtliche Rechte und Pflichten beiderseits bindend sind 
-      – insbesondere die Pflicht zur Versorgung mit reichlich Speis und Trank.
+      sämtliche Rechte und Pflichten beiderseits bindend sind – 
+      insbesondere die Pflicht zur Versorgung mit reichlich Speis und Trank.
     </p>
   </div>
 
   <div class="images-section">
-    <!-- "Bier & Bauarbeiter" als Mini-Collage -->
+    <!-- Bier & Bauarbeiter als Mini-Collage -->
     <div class="beer-construction">
-      <!-- Bier -->
       <img 
-        src="https://images.unsplash.com/photo-1552299106-fe93f6b78f55?ixlib=rb-4.0&auto=format&fit=crop&w=480&q=80" 
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKEnPC90ZXh0Pjwvc3ZnPg=="
         alt="Bier"
       >
-      <!-- Bauarbeiter -->
       <img 
-        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f8?ixlib=rb-4.0&auto=format&fit=crop&w=480&q=80" 
+        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKcvTwvdGV4dD48L3N2Zz4="
         alt="Bauarbeiter"
       >
     </div>
 
-    <!-- Heimkino -->
+    <!-- Heimkino (Emoji 🎬) -->
     <img 
       class="heimkino"
-      src="https://images.unsplash.com/photo-1586079362478-48e55fec2f64?ixlib=rb-4.0&auto=format&fit=crop&w=480&q=80"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCI+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iNjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPuKAnsM8L3RleHQ+PC9zdmc+"
       alt="Heimkino"
     >
   </div>
