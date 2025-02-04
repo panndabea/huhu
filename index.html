@@ -27,11 +27,6 @@
       margin-bottom: 2rem;
     }
 
-    .header img {
-      width: 100px;
-      height: auto;
-    }
-
     .title {
       font-size: 1.8rem;
       margin: 0.5rem 0 0;
@@ -111,9 +106,15 @@
 
 <div class="container">
   <div class="official-seal">Amtlich</div>
+
   <div class="header">
-    <!-- Beispielhaftes Logo, ggf. ersetzen -->
-    <img src="https://via.placeholder.com/100x100.png?text=Logo" alt="Amtliches Logo">
+    <!-- "Amtliches" Logo als Base64-kodiertes SVG -->
+    <img 
+      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI4MCIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1zaXplPSI1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgYWxpZ25tZW50LWJhc2VsaW5lPSJjZW50cmFsIiBmb250LWZhbWlseT0ic2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIj5BTVQ8L3RleHQ+PC9zdmc+" 
+      alt="Amtliches Logo" 
+      width="100" 
+      height="100"
+    >
     <h1 class="title">Behördlicher Gutschein</h1>
     <p class="sub-title">Gemäß Erlass BGB V § 4711</p>
   </div>
@@ -127,8 +128,8 @@
       für insgesamt <strong>4 Wochenenden</strong> bewilligt wird.
     </p>
     <p>
-      Dieser Bescheid ist als amtliches Dokument ohne Unterschrift gültig und 
-      bedarf keiner weiteren Bestätigung. 
+      Dieser Bescheid ist als amtliches Dokument ohne Unterschrift gültig 
+      und bedarf keiner weiteren Bestätigung.
     </p>
     <p>
       Bitte beachten Sie, dass bei Inanspruchnahme dieses Gutscheins 
@@ -138,16 +139,22 @@
   </div>
 
   <div class="images-section">
-    <!-- Beispielfotos, ggf. ersetzen -->
-    <img src="https://via.placeholder.com/300.png?text=Gemeinsamer+Spa%C3%9F" alt="Gemeinsamer Spaß">
-    <img src="https://via.placeholder.com/300.png?text=Bauvorhaben" alt="Bauvorhaben Symbolbild">
+    <!-- Platzhalter-Bilder mit passendem Text -->
+    <img 
+      src="https://via.placeholder.com/300?text=Bier+%26+Bauarbeiter" 
+      alt="Bier & Bauarbeiter"
+    >
+    <img 
+      src="https://via.placeholder.com/300?text=Heimkino" 
+      alt="Heimkino"
+    >
   </div>
 
   <div class="footer">
     <p>Ausgestellt am: <strong>Datum</strong></p>
     <p>Behördlicher Gutschein – Amt für <em>gute Freundschaften</em></p>
   </div>
-  
+
   <div style="text-align: center;">
     <a href="javascript:window.print()" class="btn-print">Drucken</a>
   </div>
